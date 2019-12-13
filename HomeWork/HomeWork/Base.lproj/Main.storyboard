@@ -36,8 +36,11 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlp-at-vYZ">
-                                        <rect key="frame" x="72" y="200" width="136" height="31"/>
-                                        <state key="normal" title="Button" image="dealbutton"/>
+                                        <rect key="frame" x="99" y="200" width="82" height="31"/>
+                                        <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zee-DU-cEq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -95,6 +98,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="leftCardImageView" destination="Qhw-cd-1pQ" id="tae-fh-64N"/>
+                        <outlet property="leftScoreLabel" destination="c8U-Z2-e2K" id="8of-0V-9IS"/>
+                        <outlet property="rightCardImageView" destination="W7s-ez-MUi" id="VHV-og-n10"/>
+                        <outlet property="rightScoreLabel" destination="aPo-kW-cBZ" id="IKK-WV-h7D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
