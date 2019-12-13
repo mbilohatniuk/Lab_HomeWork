@@ -9,11 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //MARK: - outlets
     @IBOutlet weak var leftCardImageView: UIImageView!
     @IBOutlet weak var rightCardImageView: UIImageView!
     @IBOutlet weak var leftScoreLabel: UILabel!
     @IBOutlet weak var rightScoreLabel: UILabel!
+    
+    //MARK:- private variabels
+    var leftScore = 0
+    var rightScore = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +34,14 @@ class ViewController: UIViewController {
         
         leftCardImageView.image = UIImage(named: "card\(leftNumber)")
         rightCardImageView.image = UIImage(named: "card\(rightNumber)")
+        
+        if leftNumber > rightNumber {
+            leftScore += 1
+            leftScoreLabel.text = String(leftScore)
+        } else if leftNumber < rightNumber {
+            rightScore += 1
+            rightScoreLabel.text = String(rightScore)
+        }
     }
 }
 
