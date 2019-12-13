@@ -22,7 +22,12 @@ class ViewController: UIViewController {
 
 
     @IBAction func dealButtonTapped(_ sender: UIButton) {
-        print("Tapped")
+        
+        let leftNumber = Int.random(in: 2...14)
+        let rightNumber = Int.random(in: 2...14)
+        
+        leftCardImageView.image = UIImage(named: "card\(leftNumber)")
+        rightCardImageView.image = UIImage(named: "card\(rightNumber)")
     }
 }
 
